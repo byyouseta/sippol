@@ -2,8 +2,7 @@
 
 @section('head')
     <!-- DataTables -->
-    <link rel="stylesheet"
-        href="{{ asset('adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('adminlte/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}">
     <style>
         .example-modal .modal {
             position: relative;
@@ -18,14 +17,12 @@
         .example-modal .modal {
             background: transparent !important;
         }
-
     </style>
 @endsection
 @section('judul')
     Master Jenis Pelaporan
 @endsection
 @section('content')
-
     <div class="col-xs-12">
         <div class="box">
             <div class="box-header">
@@ -96,13 +93,13 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
                     <span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">Tambah Kode Peristiwa</h4>
+                    <h4 class="modal-title">Tambah Jenis Laporan</h4>
                 </div>
                 <div class="modal-body">
                     <form method="POST" action="/pelaporan/store">
                         @csrf
                         <div class="form-group">
-                            <label>Nama Jenis Peristiwa</label>
+                            <label>Nama Jenis Laporan</label>
                             <input type="text" class="form-control" name="jenis">
                             @error('jenis')
                                 <span class="invalid-feedback text-red" role="alert">
